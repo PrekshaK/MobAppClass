@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="https://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
+    <script src="https://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="contr">
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title"> TRYING TO GET DATA BACK FROM PARSE</h1>
+
+      </ion-header-bar>
+      <ion-content class="padding">
+
+
+        <ion-list> <ion-item ng-repeat="item in itemList">
+            {{item}} 
+            
+            </ion-item>
+        </ion-list>
+          {{trying}}
+
+       
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
