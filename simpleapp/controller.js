@@ -40,7 +40,7 @@ app.controller("contr", function ($scope, $state, ParseHttpService) {
             $scope.inputItem = {};
         }
     };
-
+//changed
 
     $scope.editObject = function editObject(_object) {
 
