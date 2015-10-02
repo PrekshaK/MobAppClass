@@ -1,0 +1,20 @@
+<body ng-app="app" ng-controller="gotohome">
+<ion-pane>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title"> Please Login Before Proceeding</h1>
+
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="credentials.username" placeholder="UserName"/>
+            </label>
+            <label class="item item-input">
+                <input type="password" ng-model="credentials.password" placeholder="Password"/>
+            </label>
+            <button class="button button-calm" ng-click="gohome()">Login</button>
+        </div>
+
+    </ion-content>
+</ion-pane>
+</body>

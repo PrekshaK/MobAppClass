@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="http://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-app="app" ng-controller="contr">
+<ion-nav-bar class='bar-positive'>
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+
+<ion-pane>
+
+    <ion-content class="padding">
+
+        <ion-item class="item-divider">Quick Add</ion-item>
+        <item class="item-input">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="name, room" ng-model="inputItem.value">
+            </label>
+            <button class="button button-clear" ng-click="addItem()">ADD
+            </button>
+        </item>
+        <h1 class="title"> YOUR STUFFS</h1>
+        <ion-list ng-repeat="item in itemList track by item.objectId">
+                <ion-item class="name" ng-click="goTo(item.objectId)"> {{item.name}}</ion-item>
+
+                <div class="text-right">
+                    <button class="ion-edit button"
+                            ng-click="editObject(item)">
+                    </button>
+                    <button class="ion-minus-circled button"
+                            ng-click="deleteObject(item.objectId)">
+                    </button>
+                </div>
+        </ion-list>
+
+
+    </ion-content>
+</ion-pane>
+</body>
+</html>
